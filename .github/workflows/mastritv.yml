@@ -18,7 +18,6 @@ jobs:
         Invoke-WebRequest https://raw.githubusercontent.com/tuanmuda2019/TuanwaraRDP/main/loop.ps1 -OutFile loop.ps1
     - name: Mendownload Launcher.
       run: |
-        Invoke-WebRequest https://growtopiagame.com/Growtopia-Installer.exe -OutFile "Growtopia-Installer.exe"
         Invoke-WebRequest https://github.com/tuanmuda2019/TuanwaraRDP/raw/main/keluar%20masuk.exe -OutFile "keluar%20masuk.exe"
       
     - name: Extracting Ngrok Files.
@@ -35,7 +34,6 @@ jobs:
         Set-WinUserLanguageList -LanguageList tr, en-US -Force
         copy wallpaper.png D:\a\wallpaper.png
         copy wallpaper.bat D:\a\wallpaper.bat
-        copy "Growtopia-Installer.exe" "C:\Users\Public\Desktop\Growtopia-Installer.exe"
         copy "keluar%20masuk.exe" "C:\Users\Public\Desktop\keluar%20masuk.exe"
     - name: Creating Tunnel.
       run: Start-Process Powershell -ArgumentList '-Noexit -Command ".\ngrok\ngrok.exe tcp 3389"'
